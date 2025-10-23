@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Registra automaticamente a presença diária no CSSBuy assim que a página carrega.
 // @author       Nícolas Pastorello
-// @match        https://www.cssbuy.com/web/user*
+// @match        https://www.cssbuy.com/*
 // @icon         https://www.cssbuy.com/favicon.ico
 // @grant        none
 // ==/UserScript==
@@ -85,12 +85,9 @@
             const text = await res.text();
             let json = {};
             try { json = JSON.parse(text); } catch {}
-            log('Resposta do servidor:', 'success');
-            console.log(json || text);
 
             if (json && json.success === false) {
                 log('A presença de hoje já foi registrada anteriormente.', 'warn');
-                toast('Presença de hoje já registrada.', '#ff9800');
             } else if (json && json.success === true) {
                 log('Presença diária registrada com sucesso!', 'success');
                 toast('Presença diária confirmada com sucesso!', '#4caf50');
