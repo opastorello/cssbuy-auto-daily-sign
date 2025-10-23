@@ -4,7 +4,7 @@ Registra automaticamente a presença diária no CSSBuy assim que a página carre
 
 - **Autor:** Nícolas Pastorello ([@opastorello](https://github.com/opastorello))
 - **Versão:** 1.0
-- **Compatível com:** Tampermonkey/Greasemonkey
+- **Compatível com:** [Tampermonkey](https://www.tampermonkey.net/)/[Greasemonkey](https://www.greasespot.net/)
 - **URL alvo:** `https://www.cssbuy.com/web/user*`
 
 > ⚠️ É necessário estar logado no CSSBuy. O script apenas dispara o endpoint oficial de “sign” da própria plataforma após o `load` da página.
